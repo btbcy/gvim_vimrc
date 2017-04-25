@@ -191,3 +191,4 @@ let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\
 
 " close windows by <F8>
 nmap <F8> :lclose<CR>
+
