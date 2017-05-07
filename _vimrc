@@ -4,8 +4,8 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/syntastic'
-" Plugin 'w0rp/ale'
+" Plugin 'scrooloose/syntastic'
+Plugin 'w0rp/ale'
 " Plugin 'ervandew/supertab'
 " Plugin 'Valloric/YouCompleteMe'
 Plugin 'Shougo/neocomplete.vim'
@@ -115,26 +115,29 @@ let g:UltiSnipsJumpBackwardTrigger="<tab>"
 let g:UltiSnipsSnippetDirectories=["snippetsfj", "bundle/ultisnips/UltiSnips"]
 
 " ALE
-" let g:ale_sign_column_always=1
+let g:ale_sign_column_always=1
 " let g:ale_set_hightlights=0
-" let g:ale_sign_error='X'
-" let g:ale_sign_warning='>'
-" let g:ale_statusline_format=['X %d', '> %d', 'v ok']
+let g:ale_sign_error='X'
+let g:ale_sign_warning='>'
+let g:ale_statusline_format=['X %d', '! %d', 'v ok']
+let g:ale_echo_msg_error_str = 'E'
+let g:ale_echo_msg_warning_str = 'W'
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 " location list
 
 " Syntastic
-let g:syntastic_error_symbol='X'
-let g:syntastic_warning_symbol='>'
-let g:syntastic_check_on_open=1
-let g:syntastic_auto_loc_list=1
-let g:syntastic_enable_hightlighting=1
-let g:syntastic_cpp_include_dirs=['C:\Program Files (x86)\CodeBlocks\MinGW\lib\gcc\mingw32\4.7.1\include\c++']
-let g:syntastic_cpp_remove_include_errors=1
-let g:syntastic_cpp_check_header=1
-let g:syntastic_cpp_compiler_options='-std=c++11 -stdlib=libstdc++'
-let g:syntastic_enable_balloons=1
-let g:syntastic_python_checkers=['pylint']
-let g:syntastic_python_pylint_args='--disable=c0111,r0903,c0301'
+" let g:syntastic_error_symbol='X'
+" let g:syntastic_warning_symbol='>'
+" let g:syntastic_check_on_open=1
+" let g:syntastic_auto_loc_list=1
+" let g:syntastic_enable_hightlighting=1
+" let g:syntastic_cpp_include_dirs=['C:\Program Files (x86)\CodeBlocks\MinGW\lib\gcc\mingw32\4.7.1\include\c++']
+" let g:syntastic_cpp_remove_include_errors=1
+" let g:syntastic_cpp_check_header=1
+" let g:syntastic_cpp_compiler_options='-std=c++11 -stdlib=libstdc++'
+" let g:syntastic_enable_balloons=1
+" let g:syntastic_python_checkers=['pylint']
+" let g:syntastic_python_pylint_args='--disable=c0111,r0903,c0301'
 
 " Pylint
 let g:pylint_onwrite = 0
